@@ -231,6 +231,7 @@ import PhotosUI
                 return
             }
             renderEngine = SCNRenderer(device: mtlDevice, options: nil)
+            renderEngine.autoenablesDefaultLighting = true
             renderEngine.scene = view.scene
 
             gpuLoop = CADisplayLink(target: WeakProxy(target: self),
